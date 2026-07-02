@@ -1,5 +1,3 @@
-# Analysis_Delivery-_Performance_E-Commerce
-
 # 📦 Delivery Performance Analysis — Olist E-Commerce
 
 Análisis del desempeño logístico de la plataforma brasileña Olist usando arquitectura medallón en SQL Server. El proyecto evalúa el Order Cycle Time (OCT), la puntualidad de entrega, la satisfacción del cliente y el cumplimiento de los vendedores sobre un universo de **96,475 órdenes** con trazabilidad completa de fechas.
