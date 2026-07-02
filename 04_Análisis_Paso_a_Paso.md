@@ -67,7 +67,7 @@ GROUP BY puntualidad
 ```
 <img width="743" height="137" alt="image" src="https://github.com/user-attachments/assets/97b28f54-58e0-45ef-9d05-5f444b5e3876" />
 
-
+Se observa que la impuntualidad de la entrega está relacionada a una menor satisfacción de los clientes.
 
 
 
@@ -182,6 +182,8 @@ WHERE meses_ventana = 3
 ```
 <img width="1262" height="620" alt="image" src="https://github.com/user-attachments/assets/0ec85c9f-457c-4c23-88f8-c163a1ccf1a9" />
 
+A lo largo del tiempo se observan tendencias claras con respecto al desempeño de entrega: en el periodo que abarca desde mayo hasta septiembre del año 2017 se observa una leve pero continua disminución del Order Cycle Time (OCT) para que luego, en el periodo desde octubre del año 2017 hasta marzo del año 2018 se produzca una tendencia creciente (viéndose más acentuada de octubre a noviembre de año 2017) alcanzo un máximo histórico en el mes de marzo del 2018, teniendo el negocio un OCT de aproximadamente 15 días. Después de este pico, el resto de los meses se vuelve a observar otra tendencia decreciente mucho más marcada que la inicial.  
+
 
 IV. Análisis de desempeño de los vendedores en el proceso logístitoc de las órdenes
 -------------------------------------------------------------------------------------
@@ -211,6 +213,9 @@ JOIN conteo_ordenes AS c ON a.puntualidad = c.puntualidad
 ```
 <img width="1157" height="132" alt="image" src="https://github.com/user-attachments/assets/bfc16fcb-636d-4435-be85-5f3aa498722b" />
 
+Es interesante observar el hecho de que poco más de 1/4 de las órdenes con entregas tardías y con entregas a tiempo estén ligadas al incumplimiento de los plazos de entrega que tienen los vendedores a cargo de esas órdenes, esto permite formular dos visiones del desempeño por parte del vendedor y por parte del aliado logístico:  
+1) Se podría teorizar que existen algunas órdenes cuya entrega tardía se debe más al incumplimento e irresponsabilidad con los plazos de entrega del prodcucto por parte de los vendedores que por la irresponsabilidad del servicio logístico del negocio.  
+2) Se puede observar casos excepcionales de buen desempeño por parte del servicio logístico para que, pese a la demora por parte del vendedor con la entrega del producto, lograron gestionar bien sus operaciones para de todas maneras lograr cumplir con la fecha estimada de entrega indicada al cliente.
 
 
 #### 2. ¿Cuáles son los vendedores con mayor incumplimientos en los plazos de entrega de sus productos?
@@ -261,3 +266,5 @@ GROUP BY seller_id
 ORDER BY [ordenes_con_incidencia_seller] DESC
 ```
 <img width="1140" height="812" alt="image" src="https://github.com/user-attachments/assets/9a614cb4-1d95-4e30-85f6-2eb94ad361ed" />
+
+Estos resultados representan un llamado a la toma de medidas correctivas para bajar la tasa de incumplimiento de los vendedores con los plazos de la entrega de sus productos al servicio de delivery, ya que, con lo observado anteriormente, podría terminar en la entrega tardía del producto y por lo tanto con la insatisfacción del cliente con respecto a la calidad del servicio del negocio.
