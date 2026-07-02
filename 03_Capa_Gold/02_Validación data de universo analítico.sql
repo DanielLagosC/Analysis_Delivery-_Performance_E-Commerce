@@ -32,9 +32,7 @@ WHERE NOT EXISTS (
 -- El mes con mayor concentración (2018-02) registra 54 casos sobre 6,556 órdenes.
 
 -- Olist registra plazos estimados de hasta 156 días para ciertas rutas,
--- por lo que OCT alto no implica incumplimiento automático. Sin embargo, a partir de 60 días
--- la frecuencia cae a menos del 0.31% del universo, lo que permite aislar casos atípicos
--- sin descartar operaciones con plazos legítimamente largos.
+-- por lo que OCT alto no implica incumplimiento automático.
 
 
 -- % de aparicion outliers en relacion a todo el dataset
@@ -63,7 +61,7 @@ ORDER BY year_, month_
 -- Análisis de robustez de la media
 --------------------------------------------------------------------------------------------
 -- La diferencia entre el promedio con y sin valores extremos no supera 1 día en ningún mes del análisis
--- (máx. 0.99 días en 2017-03). La media es robusta como métrica central.
+-- (máx. 0.99 días en 2017-03). LA MEDIA ES ROBUSTA COMO MÉTRICA CENTRAL.
 SELECT
     YEAR(order_purchase_timestamp) AS año,
     MONTH(order_purchase_timestamp) AS mes,
